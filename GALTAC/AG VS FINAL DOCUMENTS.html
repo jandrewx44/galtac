@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: hsl(0, 0%, 100%); /* Light gray background */
+      margin: 0;
+      padding: 0;
+    }
+    .signup-container {
+      width: 300px;
+      margin: 50px auto;
+      background-color: #f0e3e3fd; /* White background for form container */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333333; /* Dark text color */
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555555; /* Medium text color */
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #cccccc; /* Light gray border */
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff; /* Blue button background */
+      color: #ffffff; /* White button text color */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Login</h2>
+    <form id="signupForm" action="submit_signup.php" method="POST" onsubmit="return redirectToHomePage()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm_password">Confirm Password:</label>
+      <input type="password" id="confirm_password" name="confirm_password" required>
+
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  
+
+  <script>
+    function redirectToHomePage() {
+      // Redirect to the home page after successful sign-up
+      window.location.href = "AG VS FINAL DOCUMENTS.html";
+      return false; // Prevent form submission (will be handled by the redirection)
+    }
+  </script>
+</body>
+</html>
